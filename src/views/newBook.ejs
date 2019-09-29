@@ -1,0 +1,33 @@
+<% include partials/header%>
+<% include partials/navigation%>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title text-center text-muted">Add new book</h2>
+                </div>
+                <div class="card-body">
+                    <form action="/newBook" method="post">
+                        <div class="form-group">
+                            <input type="text" name="title" class="form-control" placeholder="Name book" required autocomplete="off" >
+                        </div>
+                        <div class="form-group">
+                                <input type="text" name="author" class="form-control" placeholder="Author book" required autocomplete="off" >
+                            </div>
+                        <div class="form-group">
+                                <input type="url" name="image" class="form-control" placeholder="http://www.website.com" required autocomplete="off" >
+                            </div>
+                            <div class="form-group">
+                                <textarea name="description" required autocomplete="off" rows="2" placeholder="Description" class="form-control"></textarea>
+                            </div>
+                            <div class="for-control">
+                                <input type="submit" value="Save book" class="btn btn-primary btn-block">
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include partials/footer%>

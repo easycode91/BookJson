@@ -1,0 +1,20 @@
+<% include partials/header%> <% include partials/navigation%>
+<div class="container">
+  <div class="row">
+    <% books.forEach(function(book){ %>
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <img src="<%= book.image%>" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title"><%= book.title%> / <%= book.author%> </h5>
+          <p class="card-text">
+            <%= book.description%>
+          </p>
+          <a href="/delete/<%= book.id%>" class="btn btn-danger btn-block">Delete</a>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+<% include partials/footer%>
